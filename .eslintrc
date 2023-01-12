@@ -1,0 +1,64 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": ["plugin:react/jsx-runtime", "airbnb/base", "plugin:@typescript-eslint/recommended", "prettier", "prettier/@typescript-eslint"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "import/no-unresolved": ["off"],
+    "import/extensions": ["warn", "never"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "object-curly-newline": "off",
+    "camelcase": "off",
+    "ban-ts-comment": 0,
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/naming-convention": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/prefer-as-const": 0,
+    "consistent-return": "off",
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak": "off",
+    "default-case": "off",
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off",
+    "no-case-declarations": "off",
+    "linebreak-style": 0,
+    "function-paren-newline": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.test.ts", "**/*.test.tsx"] }],
+    "react/display-name": [0]
+  },
+  "overrides": [
+    {
+      // setupTests.ts should have global access to jest
+      "files": ["setupTests.ts", "*.test.tsx", "*.test.ts"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
