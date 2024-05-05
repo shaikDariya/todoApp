@@ -1,6 +1,6 @@
 # Todo App
 
-A simple todo app. Worker can add, delete and update the todo items. The List auto sorted by task complete and id.
+This is a simple Todo app built with React, TypeScript, and Context API. It allows users to create, read, update, and delete todo items.
 
 ## Screenshots
 
